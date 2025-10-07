@@ -25,6 +25,11 @@ Project: Research CSS Styling
         justify-content: center;
         text-align: center;
         align-items: center;
+
+        /* Animation */
+        animation: fadeSlideIn 1s ease-in-out;
+        opacity: 0;
+        animation-fill-mode: forwards;
     }
 
     .articles ul{
@@ -36,6 +41,12 @@ Project: Research CSS Styling
         flex-direction: column;
         gap: 2rem;
         align-items: center;
+
+        /* Animation */
+        animation: fadeSlideIn 1s ease-in-out;
+        opacity: 0;
+        animation-fill-mode: forwards;
+        animation-delay: 0.5s;
     }
             .articles ul li a{
                 color:#ffffff;
@@ -56,6 +67,8 @@ Project: Research CSS Styling
     color: #ffffff;
     background-color: #000000d0;
     border-radius: 15px;
+    
+    /* Basic Display Properties */
     display: flex;
     flex-direction: column;
     text-align: center;
@@ -64,6 +77,11 @@ Project: Research CSS Styling
     margin: 5vh auto;
     padding: 1rem;
     width: min(90vw, 800px);
+    
+    /*Animation*/
+    animation: fadeSlideIn 1s ease-in-out;
+    opacity: 0;
+    animation-fill-mode: forwards;
 }
 
     .note h2{
@@ -88,11 +106,18 @@ object{
 
 /*Smaller Screen Adaptation*/
 @media (max-width: 846px){
-    .note h2{
-        font-size: 1.2em;
-        justify-content: center;
-    }
-    .note p{
-        font-size: 0.8em;
+    .articles{
+        font-size: 0.95em;
     }
 }
+
+@keyframes fadeSlideIn{
+            0%{
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            100%{
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
