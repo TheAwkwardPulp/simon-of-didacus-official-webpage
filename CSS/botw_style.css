@@ -17,6 +17,9 @@ Project: BotW Map Page CSS Styling
             background-color: #000000;
             text-decoration: solid;
             padding: 1vh 2vw;
+            animation: fadeSlideIn 1s ease-in-out;
+            opacity: 0;
+            animation-fill-mode: forwards;
         }
 
         .map h3{
@@ -26,6 +29,10 @@ Project: BotW Map Page CSS Styling
             font-family:'Trebuchet MS', 
             'Lucida Sans Unicode', 'Lucida Grande', 
             'Lucida Sans', Arial, sans-serif;
+            animation: fadeSlideIn 1s ease-in-out;
+            opacity: 0;
+            animation-fill-mode: forwards;
+            animation-delay: 0.5s;
         }
             .mm{
                 color: #dd0000;
@@ -54,5 +61,16 @@ Project: BotW Map Page CSS Styling
 
             .map h3{
                 font-size: 0.8rem;
+            }
+
+        }
+    @keyframes fadeSlideIn{
+            0%{
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            100%{
+                opacity: 1;
+                transform: translateY(0);
             }
         }
