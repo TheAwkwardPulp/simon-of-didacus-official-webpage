@@ -1,0 +1,157 @@
+/*
+Author: Daylan Jewell
+Project: Main Page/Universal CSS Styling
+*/
+
+/*FONT IMPORTS*/
+@font-face{
+    font-family: 'Hylia Serif Beta';
+    src: url(../font/HyliaSerifBeta-Regular.otf) format(opentype);
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Hylia Serif Beta';
+    src: url('HyliaSerifBeta-Regular.woff') format('woff'),
+        url('HyliaSerifBeta-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+/*Main Elements*/
+body{
+    background-color:#f1c99c;
+    margin: 0;
+    padding: 0;
+    font-family: 'Hylia Serif Beta';
+}
+
+h1{
+    text-align: center;
+    color: #ffffff;
+}
+
+
+/*Header and Navigation Bar*/
+header{
+    background: #ca9354;
+    border-bottom: 1px solid #ededed;
+    padding: 2vh 2vw;
+}
+    /*Navigation Bar w/ website title*/
+    .nav{
+        display: flex;
+        justify-content: space-between;
+        padding: 0.5rem 1rem;
+        background-color:#ca9354;
+        color: #ffffff;
+        flex-wrap: wrap;
+    }
+        .title{
+            color: #ffffff;
+            text-decoration: solid;
+            background-color: #000000d0;
+            border-radius: 15px;
+            border: solid 2px #ffffff;
+            display: inline-block;
+            padding: 0.5rem 1rem;
+            font-size: 1.1rem;
+            
+        }
+            .nav a:hover{
+                background-color: #000000;
+            }
+
+            .title sup{
+                font-size: 0.6em;
+                font-weight: bold;
+            }
+
+            .title sub{
+                font-size: 0.6em;
+            }
+
+    .nav ul{
+        list-style: none;
+        display: flex;
+        gap: 0.75rem;
+        padding: 0;
+        flex-wrap: wrap;
+    }
+
+    .nav ul li a{
+        color:#ffffff;
+        border: solid 2px #ffffff;
+        background-color: #000000d0;
+        border-radius: 15px;
+        text-decoration: solid;
+        padding: 0.5rem 1rem;
+        transition: background-color 0.2s ease;
+    }
+
+    .nav ul li a:hover{
+        background-color: #000000;
+    }
+
+        
+    /*Main Content of Home Page*/
+   .home_banner{
+        background: url(../images/calvary.png) center/cover no-repeat;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        min-height: 80vh;
+        padding: 2rem;
+    }
+
+        /*Welcome Header*/
+        .banner_header{
+            color: #ffffff;
+            border: solid 2px #ffffff;
+            border-radius: 15px;
+            background-color: #000000;
+            padding: 1rem;
+            max-width: 800px;
+            animation: fadeSlideIn 1.5s ease-in-out;
+            opacity: 0;
+            animation-fill-mode: forwards;
+        }
+
+        @keyframes fadeSlideIn{
+            0%{
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            100%{
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /*Smaller Screen Adaptation*/
+        @media (max-width: 846px){
+            .title{
+                font-size: 1rem;
+            }
+
+            .nav{
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .nav ul{
+                justify-content: center;
+            }
+            
+            .banner_header h1{
+                font-size: 1.5rem;
+            }
+
+            .banner_header h2{
+                font-size: 1rem;
+            }
+        }

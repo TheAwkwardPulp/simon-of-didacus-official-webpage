@@ -1,0 +1,98 @@
+/*
+Author: Daylan Jewell
+Project: Research CSS Styling
+*/
+
+/**************
+-- MAIN PAGE --
+**************/
+.articles{
+    display: flex;
+    flex-direction: column;
+    color: #ffffff;
+    justify-content: center;
+    align-items: center;
+    max-width: 800px;
+    margin: 5vh auto;
+    padding: 0 1rem;
+    font-size: 1.5rem;
+}
+    .articles h2{
+        border: solid 2px #ffffff;
+        border-radius: 15px;
+        background-color: #000000;
+        padding: 0.5rem 1rem;
+        justify-content: center;
+        text-align: center;
+        align-items: center;
+    }
+
+    .articles ul{
+        list-style-type: none;
+        font-size: 1em;
+        padding: 0;
+        margin: 1rem 0;
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+        align-items: center;
+    }
+            .articles ul li a{
+                color:#ffffff;
+                padding: 0.5rem 1rem;
+                background-color: #000000d0;
+                border-radius: 15px;
+                text-decoration: solid;
+            }
+                .articles ul li a:hover{
+                    background-color: #000000;
+                    cursor: pointer;
+                }
+
+/*************
+-- Exegesis --
+*************/
+.note{
+    color: #ffffff;
+    background-color: #000000d0;
+    border-radius: 15px;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    margin: 5vh auto;
+    padding: 1rem;
+    width: min(90vw, 800px);
+}
+
+    .note h2{
+        font-size: 1.5em;
+        justify-content: center;
+    }
+    
+    .note p{
+        font-family:'Trebuchet MS', 
+        'Lucida Sans Unicode', 'Lucida Grande', 
+        'Lucida Sans', Arial, sans-serif;
+        font-size: 1em;
+    }
+
+object{
+    display: block;
+    width: min(90vw, 1200px);
+    height: 80vh;
+    margin: 10vh auto;
+    border-radius: 15px;
+}
+
+/*Smaller Screen Adaptation*/
+@media (max-width: 846px){
+    .note h2{
+        font-size: 1.2em;
+        justify-content: center;
+    }
+    .note p{
+        font-size: 0.8em;
+    }
+}

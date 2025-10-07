@@ -1,0 +1,58 @@
+/*
+Author: Daylan Jewell
+Project: BotW Map Page CSS Styling
+*/
+
+.map{
+    text-align: center; 
+    color: #ffffff;
+}
+    .map div{
+        padding: 1vh 15vw;
+    }
+    
+        .map h1{
+            border: solid 2px #ffffff;
+            border-radius: 15px;
+            background-color: #000000;
+            text-decoration: solid;
+            padding: 1vh 2vw;
+        }
+
+        .map h3{
+            background-color: #000000d0;
+            border-radius: 15px;
+            padding: 1vh 2vw;
+            font-family:'Trebuchet MS', 
+            'Lucida Sans Unicode', 'Lucida Grande', 
+            'Lucida Sans', Arial, sans-serif;
+        }
+            .mm{
+                color: #dd0000;
+                font-family: 'Hylia Serif Beta';
+            }
+
+            .zd{
+                color: #00bbff;
+                text-decoration: solid;
+            }
+                .zd:hover{
+                    text-decoration: underline;
+                }
+        .map embed{
+        width: 90vw;
+        height: 90vh;
+        border-radius: 15px;
+        margin: 5vh 0vw;
+    }
+
+    /*Smaller Screen Adaptation*/
+    @media (max-width: 846px){
+            .map h1{
+                font-size: 1.5rem;
+            }
+
+            .map h3{
+                font-size: 0.8rem;
+            }
+        }
